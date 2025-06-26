@@ -1,8 +1,9 @@
+'use strict';
 (function($) {
 
     "use strict";
 
-      // background color when scroll 
+      // background color when scroll
 
   var initScrollNav = function() {
     var scroll = $(window).scrollTop();
@@ -14,11 +15,11 @@
     }
   }
 
-  $(window).scroll(function() {    
+  $(window).scroll(function() {
     initScrollNav();
-  }); 
+  });
 
-        $(document).ready(function() {   
+        $(document).ready(function() {
 
 
 
@@ -69,7 +70,7 @@
                   },
                 },
               });
-              
+
               AOS.init({
                 duration: 2500,
                 once: true,
@@ -83,7 +84,7 @@
                 clickable: true,
               },
             });
-      
+
             window.addEventListener("load", (event) => {
               //isotope
            $('.isotope-container').isotope({
@@ -91,16 +92,16 @@
              itemSelector: '.item',
              layoutMode: 'masonry'
              });
-     
-             
-     
+
+
+
              // Initialize Isotope
              var $container = $('.isotope-container').isotope({
                  // options
                  itemSelector: '.item',
                  layoutMode: 'masonry'
              });
-     
+
              $(document).ready(function() {
                  //active button
              $('.filter-button').click(function() {
@@ -108,7 +109,7 @@
                  $(this).addClass('active');
                  });
              });
-             
+
              // Filter items on button click
              $('.filter-button').click(function() {
              var filterValue = $(this).attr('data-filter');
@@ -120,7 +121,7 @@
              $container.isotope({ filter: filterValue });
              }
              });
-     
+
            });
 
             // init jarallax parallax
@@ -131,10 +132,10 @@
                 keepImg: true,
               });
             }
-            
+
             initJarallax();
 
-                                  
+
 
         }); // End of a document
 

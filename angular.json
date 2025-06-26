@@ -47,7 +47,7 @@
               "src/assets/aos/aos.css"
             ],
             "scripts": [
-              "src/assets/js/jquery-1.11.0.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/swiper-bundle.min.js",
               "src/assets/aos/aos.js",
               "src/assets/js/bootstrap.bundle.min.js",
