@@ -19,25 +19,25 @@
               <ul id="navbar"
                 class="navbar-nav text-titlecase fw-bold justify-content-lg-center justify-content-md-end align-items-center text-center flex-grow-1 text-hover">
                 <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold active" routerLink="/home" >Home</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/home" [ngClass]="activeRoute === '/home' ? 'active': ''" >Home</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold" routerLink="/about">About</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/about" [ngClass]="activeRoute === '/about' ? 'active': ''"  >About</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold" routerLink="/projects" >Projects</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/projects" [ngClass]="activeRoute === '/projects' ? 'active': ''" >Projects</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold" routerLink="/services" >Services</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/services" [ngClass]="activeRoute === '/services' ? 'active': ''" >Services</a>
                 </li>
                 <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold" routerLink="/news" news>News</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/news" [ngClass]="activeRoute === '/news' ? 'active': ''">News</a>
                 </li>
                  <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold" routerLink="/news">chamber</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/chamber" [ngClass]="activeRoute === '/chamber' ? 'active': ''">chamber</a>
                 </li>
                  <li class="nav-item me-5">
-                  <a class="nav-link text-titlecase fw-bold" routerLink="/contact" >contact us</a>
+                  <a class="nav-link text-titlecase fw-bold" routerLink="/contact" [ngClass]="activeRoute === '/contact' ? 'active': ''" >contact us</a>
                 </li>
               </ul>
               <div class="social-links d-flex mt-5 mt-lg-0 align-items-center justify-content-end">

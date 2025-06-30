@@ -7,17 +7,17 @@ import * as $ from 'jquery';
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
-export class HomePageComponent implements OnInit, AfterViewInit {
+export class HomePageComponent implements OnInit {
     constructor(@Inject(DOCUMENT) private readonly document: Document) {
     }
 
     ngOnInit(): void {
     this.addScript('assets/js/script.js');
   }
-  ngAfterViewInit(): void {
-   (window as any).legacyCode
-  }
-    private addScript(scriptSrc: string) {
+
+
+
+  private addScript(scriptSrc: string) {
         const script = this.document.createElement('script');
         script.type = 'text/javascript';
         script.src = scriptSrc;

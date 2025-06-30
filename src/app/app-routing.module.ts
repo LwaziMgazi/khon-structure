@@ -6,7 +6,13 @@ import { ProjectsComponent} from './projects/projects.component';
 import { ServicesComponent} from './services/services.component';
 import { NewsComponent } from './news/news.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ChamberComponent } from './chamber/chamber.component';
 const routes: Routes = [
+   {
+    path:'',
+    redirectTo:'home',
+     pathMatch: 'full'
+  },
    {
     path: 'home',
     component: HomePageComponent
@@ -30,6 +36,10 @@ const routes: Routes = [
    {
     path: 'contact',
     component: ContactUsComponent
+  },
+   {
+    path: 'chamber',
+    component: ChamberComponent
   }
 ];
 

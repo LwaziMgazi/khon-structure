@@ -1,8 +1,8 @@
 /*
 Theme Name: Bamboo - Construction Company Website Template
-Theme URI: 
-Author: 
-Author URI: 
+Theme URI:
+Author:
+Author URI:
 Description: Bamboo is specially designed product packaged for construction company by TemplatesJungle.
 Version: 0.1
 */
@@ -56,7 +56,7 @@ CSS STRUCTURE:
   4.9 Our Achievement
   4.10 Latest Blog
 
-    
+
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -69,10 +69,10 @@ CSS STRUCTURE:
   --gray-color-300: #D1D1D1;
   --gray-color-400: #C0C0C0;
   --gray-color-500: #adb5bd;
-  --dark-gray-color: #474341;
+  --dark-gray-color: #002B7F;
   --bs-light-rgb: rgba(255, 255, 255, 1);
   --light-color: #fff;
-  --primary-color: #ff9e0d;
+  --primary-color: #D9481E;
   --swiper-theme-color: #807E7C !important;
   --bs-primary-rgb: 255, 158, 13;
 }
@@ -523,23 +523,23 @@ h3 {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--primary-color);
-  position: relative; 
+  position: relative;
 }
 @media (max-width: 999px) {
   .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover{
     position: unset;
-    
+
   }
 }
 
 .navbar-nav .nav-link.active::after,
 .navbar-nav .nav-link:hover::after {
-  content: ""; 
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -32px; 
-  width: 100%; 
-  border-bottom: 4px solid #F0A500; 
+  bottom: -32px;
+  width: 100%;
+  border-bottom: 4px solid #D9481E;
 }
 
 
@@ -985,4 +985,8 @@ iconify-icon.services-icon {
 }
 .bg-pattern{
   z-index: -99;
+}
+
+.btn-main-color{
+  background-color: #002B7F;
 }
