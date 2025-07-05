@@ -1,0 +1,24 @@
+hr {
+  border: 1px solid black;
+  width: 100%;
+  margin: 5px auto; /* Center the line */
+  margin-left: 12px;
+}
+.icon {
+  margin-left: 5px; /* Adjust space as needed */
+  margin-bottom: 1px;
+}
+
+
+.ConMeetsFinImg:hover{
+  height: 190px;
+  width: 230px;
+  border: 2px solid #002B7F;
+
+}
+
+@keyframes animate {
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}

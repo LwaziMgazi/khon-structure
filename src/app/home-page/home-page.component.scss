@@ -1,0 +1,26 @@
+.assests{
+ display: flex;
+ justify-content:center;
+ margin: auto;
+
+}
+
+// .single-assest {
+//     padding: 20px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+// }
+.single-assest {
+  position: relative;
+}
+.align-btn {
+    position: absolute;
+  /* Constrain positioning */
+  top: 19rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%; /* Prevent overflow */
+  max-height: 100%;
+}

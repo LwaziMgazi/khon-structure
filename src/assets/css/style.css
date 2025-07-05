@@ -72,7 +72,7 @@ CSS STRUCTURE:
   --dark-gray-color: #002B7F;
   --bs-light-rgb: rgba(255, 255, 255, 1);
   --light-color: #fff;
-  --primary-color: #D9481E;
+  --primary-color: #f1a500;
   --swiper-theme-color: #807E7C !important;
   --bs-primary-rgb: 255, 158, 13;
 }
@@ -205,13 +205,13 @@ strong {
 }
 
 .padding-medium {
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 
 .padding-large {
   padding-top: 7em;
-  padding-bottom: 7em;
+  padding-bottom: 2em;
 }
 
 .padding-xlarge {
@@ -233,7 +233,7 @@ strong {
 
 .margin-large {
   margin-top: 7em;
-  margin-bottom: 7em;
+  margin-bottom: 2em;
 }
 
 .margin-xlarge {
@@ -539,7 +539,7 @@ h3 {
   left: 0;
   bottom: -32px;
   width: 100%;
-  border-bottom: 4px solid #D9481E;
+  border-bottom: 4px solid #f1a500;
 }
 
 
