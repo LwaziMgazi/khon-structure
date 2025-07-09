@@ -11,7 +11,7 @@
         </div>
     </div>
 </section>
-<section id="services" class="align-items-center" >
+<section id="services" class="align-items-center" *ngIf="viewPort === 'all'">
   <div class="container mt-5 pt-5" data-aos="fade-up" data-aos-duration="2000">
       <div class="section-header my-5">
           <h2 class="text-uppercase my-3 left-pattern">Our Chamber</h2>
@@ -28,10 +28,51 @@
               <img src="../../assets/images/card-tipper.PNG" class="card-img-top" alt="Tipper Truck">
                 <div class="card-body">
                   <h5 class="card-title">The 10m3 Tipper Truck</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="services-single.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-3 btn-main-color">
-                      <span>Read More</span>
-                    </a>
+                  <div class="row">
+                    <div class="col-6" style="margin-bottom: 0px;">
+                        <b>Funding Target:</b>
+                    </div>
+                     <div class="col-6">
+                        <b>R1,218,214</b>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-12" >
+                       <p style="margin-bottom: 0px;color: #002B7F;">53.78% Funded</p>
+                    </div>
+                     <div class="progress col-10" style="padding: 0px; margin-left: 10px; margin-right: 8px;">
+                         <div class="progress-bar" role="progressbar" style="width: 75%; background: #f1a500;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                       Internal Rate of Return (IRR)
+                    </div>
+                    <div class="col-md-4">
+                        <b>15.00</b>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                       Est Net Rental Yield
+                    </div>
+                    <div class="col-md-4">
+                        <b>0%</b>
+                    </div>
+                  </div>
+                    <div class="row">
+                    <div class="col-md-8">
+                       Market Valuation
+                    </div>
+                    <div class="col-md-4">
+                        <b>R0</b>
+                    </div>
+                  </div>
+                  <div class="row" style="margin: auto;">
+                      <a class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-3 btn-main-color" (click)="setView('tipper')">
+                        <span class="m-auto text-center" >View Asset</span>
+                      </a>
+                  </div>
                 </div>
             </div>
         </div>
@@ -43,13 +84,54 @@
                 </button>
               </div>
               <img src="../../assets/images/water-tank-card.PNG" class="card-img-top" alt="Water Tanker Truck">
-                <div class="card-body">
+                            <div class="card-body">
                   <h5 class="card-title">Water Tanker Truck</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <a href="services-single.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-3 btn-main-color">
-                      <span>Read More</span>
-                    </a>
-            </div>
+                  <div class="row">
+                    <div class="col-6" style="margin-bottom: 0px;">
+                        <b>Funding Target:</b>
+                    </div>
+                     <div class="col-6">
+                        <b>R718,214</b>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-12" >
+                       <p style="margin-bottom: 0px;color: #002B7F;">42.98% Funded</p>
+                    </div>
+                     <div class="progress col-10" style="padding: 0px; margin-left: 10px; margin-right: 8px;">
+                         <div class="progress-bar" role="progressbar" style="width: 42%; background: #f1a500;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                       Internal Rate of Return (IRR)
+                    </div>
+                    <div class="col-md-4">
+                        <b>15.00</b>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                       Est Net Rental Yield
+                    </div>
+                    <div class="col-md-4">
+                        <b>0%</b>
+                    </div>
+                  </div>
+                    <div class="row">
+                    <div class="col-md-8">
+                       Market Valuation
+                    </div>
+                    <div class="col-md-4">
+                        <b>R0</b>
+                    </div>
+                  </div>
+                  <div class="row" style="margin: auto;">
+                      <a class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-3 btn-main-color" (click)="setView('water')">
+                        <span class="m-auto text-center" t>View Asset</span>
+                      </a>
+                  </div>
+                </div>
           </div>
       </div>
       <div class="col-lg-4 col-md-6 my-5">
@@ -60,16 +142,60 @@
                 </button>
               </div>
               <img src="../../assets/images/excavator-card.PNG" class="card-img-top" alt="...">
-                <div class="card-body">
+                           <div class="card-body">
                   <h5 class="card-title">Excavator</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                     <a href="services-single.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-3 btn-main-color">
-                      <span>Read More</span>
-                    </a>
+                  <div class="row">
+                    <div class="col-6" style="margin-bottom: 0px;">
+                        <b>Funding Target:</b>
+                    </div>
+                     <div class="col-6">
+                        <b>R1,218,214</b>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-12" >
+                       <p style="margin-bottom: 0px;color: #002B7F;">30.00% Funded</p>
+                    </div>
+                     <div class="progress col-10" style="padding: 0px; margin-left: 10px; margin-right: 8px;">
+                         <div class="progress-bar" role="progressbar" style="width: 30%; background: #f1a500;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                       Internal Rate of Return (IRR)
+                    </div>
+                    <div class="col-md-4">
+                        <b>15.00</b>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                       Est Net Rental Yield
+                    </div>
+                    <div class="col-md-4">
+                        <b>0%</b>
+                    </div>
+                  </div>
+                    <div class="row">
+                    <div class="col-md-8">
+                       Market Valuation
+                    </div>
+                    <div class="col-md-4">
+                        <b>R0</b>
+                    </div>
+                  </div>
+                  <div class="row" style="margin: auto;">
+                      <a class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-3 btn-main-color" (click)="setView('exca')" >
+                        <span class="m-auto text-center" t>View Asset</span>
+                      </a>
+                  </div>
                 </div>
             </div>
       </div>
     </div>
   </div>
   </section>
+  <div *ngIf="['tipper','exca','water'].includes(viewPort)">
+      <app-single-assets [assetName]="viewPort" [assestData]="chosenView">s</app-single-assets>
+  </div>
 

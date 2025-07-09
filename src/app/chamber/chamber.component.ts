@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import{ EmailService } from '../shared/services/email.service'
 import {DOCUMENT} from '@angular/common';
 @Component({
   selector: 'app-chamber',
@@ -6,6 +7,30 @@ import {DOCUMENT} from '@angular/common';
   styleUrl: './chamber.component.scss'
 })
 export class ChamberComponent implements OnInit  {
+  viewPort: 'all' | 'tipper' | 'exca'| 'water' = 'all';
+
+  chosenView! : {
+     startDate: string;
+     closingDate: string;
+     price: number;
+  };
+
+  waterData = {
+     startDate : '2025-09-09',
+     closingDate : '2025-09-10',
+     price : 900000,
+  }
+
+  tipperData = {
+      startDate :'2025-09-07',
+      closingDate : '2025-09-08',
+      price : 1000000,
+  }
+  excData ={
+       startDate : '2025-07-06',
+       closingDate : '2025-08-09',
+       price : 1000000,
+  }
     constructor(@Inject(DOCUMENT) private readonly document: Document) {
         }
 
@@ -19,5 +44,17 @@ export class ChamberComponent implements OnInit  {
           script.src = scriptSrc;
           script.async = true;
           this.document.head.appendChild(script);
+      }
+
+      setView(input: 'all' | 'tipper' | 'exca'| 'water') {
+        this.viewPort = input;
+        console.log(this.viewPort)
+        if(input === 'tipper') {
+          this.chosenView = this.tipperData;
+        } else if (input === 'exca') {
+          this.chosenView = this.excData
+        } else if ( input === 'water') {
+           this.chosenView = this.waterData;
+        }
       }
 }
