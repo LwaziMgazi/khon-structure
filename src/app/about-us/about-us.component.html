@@ -4,7 +4,7 @@
                 <div class=" banner-content my-5 py-5 ">
                     <h1 class="banner-title light text-titlecase fw-bold">Company Profile</h1>
                     <nav class="breadcrumb mt-3 ">
-                        <a class="breadcrumb-item text-white" href="index.html">Home</a>
+                        <a class="breadcrumb-item text-white" >Home</a>
                         <span class="breadcrumb-item active text-white" aria-current="page">/Company Profile</span>
                     </nav>
                 </div>
@@ -83,11 +83,11 @@
         <h3 class="text-titlecase">Construction Meets Finance</h3>
       </div>
       <div class="row mt-5 mt-lg-0">
-        <div class="col-md-4 mb-4 mt-4">
+        <div class="col-md-4 mb-4 mt-4 finNConSection">
           <!-- <a href="blog-single.html"><img src="images/blog1.jpg" alt="image" class="img-fluid rounded-3"></a> -->
-          <p class="blog text-capitalize mt-3 fw-semibold">INVESTMENT APPROACH</p>
+          <p #Investment class="blog text-capitalize mt-3 fw-semibold finaMeetConHeading">INVESTMENT APPROACH</p>
           <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addContenttoModal('INVESTMENT APPROACH')" >
-            <img src="../../assets/images/handShake.PNG" class="ConMeetsFinImg">
+            <img src="../../assets/images/handShake.PNG" class="ConMeetsFinImg" #InvestmentImg>
           </a>
           <!-- <h6 class="blog-heading fw-semibold">
             <a href="#" class="btn-slide btn-medium btn-main-color hover-slide-right mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -99,11 +99,11 @@
             </a>
           </h6> -->
         </div>
-        <div class="col-md-4 mb-4 mt-4">
+        <div class="col-md-4 mb-4 mt-4 finNConSection">
           <!-- <a href="blog-single.html"><img src="images/blog2.jpg" alt="image" class="img-fluid rounded-3"></a> -->
-          <p class="blog text-capitalize mt-3 fw-semibold">INDUSTRY EXPERTISE</p>
+          <p #Industry class="blog text-capitalize mt-3 fw-semibold finaMeetConHeading">INDUSTRY EXPERTISE</p>
           <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addContenttoModal('INDUSTRY EXPERTISE')">
-            <img src="../../assets/images/helmet.PNG" class="ConMeetsFinImg">
+            <img src="../../assets/images/helmet.PNG" class="ConMeetsFinImg" #IndustryImg>
           </a>
            <!-- <h6 class="blog-heading fw-semibold">
             <a href="#" class="btn-slide btn-medium btn-main-color hover-slide-right mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -115,11 +115,11 @@
             </a>
           </h6> -->
         </div>
-        <div class="col-md-4 mb-4 mt-4">
+        <div class="col-md-4 mb-4 mt-4 finNConSection">
           <!-- <a href="blog-single.html"><img src="images/blog3.jpg" alt="image" class="img-fluid rounded-3"></a> -->
-          <p class="blog text-capitalize mt-3 fw-semibold">COMMUNITY IMPACT</p>
+          <p #Community class="blog text-capitalize mt-3 fw-semibold finaMeetConHeading">COMMUNITY IMPACT</p>
           <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="addContenttoModal('COMMUNITY IMPACT')">
-             <img src="../../assets/images/community.PNG" class="ConMeetsFinImg">
+             <img src="../../assets/images/community.PNG" class="ConMeetsFinImg" #CommunityImg>
           </a>
           <!-- <h6 class="blog-heading fw-semibold">
             <a href="#" class="btn-slide btn-medium btn-main-color hover-slide-right mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -133,9 +133,7 @@
         </div>
       </div>
     </div>
-
-
-  </section>
+</section>
   <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

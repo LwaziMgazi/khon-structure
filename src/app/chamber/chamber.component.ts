@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import{ EmailService } from '../shared/services/email.service'
 import {DOCUMENT} from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-chamber',
   templateUrl: './chamber.component.html',
@@ -8,6 +9,7 @@ import {DOCUMENT} from '@angular/common';
 })
 export class ChamberComponent implements OnInit  {
   viewPort: 'all' | 'tipper' | 'exca'| 'water' = 'all';
+  viewPortSubject = new BehaviorSubject<any>('all');
 
   chosenView! : {
      startDate: string;
@@ -48,7 +50,7 @@ export class ChamberComponent implements OnInit  {
 
       setView(input: 'all' | 'tipper' | 'exca'| 'water') {
         this.viewPort = input;
-        console.log(this.viewPort)
+        this.viewPortSubject.next(input);
         if(input === 'tipper') {
           this.chosenView = this.tipperData;
         } else if (input === 'exca') {
@@ -56,5 +58,11 @@ export class ChamberComponent implements OnInit  {
         } else if ( input === 'water') {
            this.chosenView = this.waterData;
         }
+      }
+
+      changetoAllView(){
+        this.addScript('assets/js/script.js');
+        this.viewPort  =  'all';
+        this.viewPortSubject.next('all')
       }
 }

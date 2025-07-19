@@ -1,11 +1,20 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit , ViewChild, ElementRef} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss'
 })
-export class AboutUsComponent implements OnInit {
+export class AboutUsComponent implements OnInit, AfterViewInit {
+  @ViewChild('Community') communityDiv!: ElementRef;
+  @ViewChild('Industry') industryDiv!: ElementRef;
+  @ViewChild('Investment') investmentDiv!: ElementRef;
+
+  //imgElements
+  @ViewChild('InvestmentImg') investmentImgDiv!: ElementRef;
+  @ViewChild('IndustryImg') industryImgDiv!: ElementRef;
+  @ViewChild('CommunityImg') communityImgDiv!: ElementRef;
+
    currentTitle:any;
    currentContent: string ='';
    constructor(@Inject(DOCUMENT) private readonly document: Document) {
@@ -13,6 +22,13 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit(): void {
     this.addScript('assets/js/script.js');
+
+
+  }
+  ngAfterViewInit(): void {
+    this.changeHeadingBackgroundCommunity();
+    this.changeHeadingBackgroundInvestment();
+    this.changeHeadingBackgroundIndustry();
   }
 
   private addScript(scriptSrc: string) {
@@ -44,6 +60,39 @@ export class AboutUsComponent implements OnInit {
         The mission is to use construction as a way to grow financial involvement in our communities, and give people
          dignified ways of earning passive income.`
       }
+    }
+
+    changeHeadingBackgroundCommunity() {
+     this.communityImgDiv.nativeElement.addEventListener('mouseenter',()=>{
+       this.communityDiv.nativeElement.style.backgroundColor= '#002B7F';
+     });
+
+      this.communityImgDiv.nativeElement.addEventListener('mouseleave',()=>{
+       this.communityDiv.nativeElement.style.backgroundColor= '#FFFFFF';
+     });
+
+    }
+
+      changeHeadingBackgroundInvestment() {
+     this.investmentImgDiv.nativeElement.addEventListener('mouseenter',()=>{
+       this.investmentDiv.nativeElement.style.backgroundColor= '#002B7F';
+     });
+
+      this.investmentImgDiv.nativeElement.addEventListener('mouseleave',()=>{
+       this.investmentDiv.nativeElement.style.backgroundColor= '#FFFFFF';
+     });
+
+    }
+
+    changeHeadingBackgroundIndustry() {
+     this.industryImgDiv.nativeElement.addEventListener('mouseenter',()=>{
+       this.industryDiv.nativeElement.style.backgroundColor= '#002B7F';
+     });
+
+      this.industryImgDiv.nativeElement.addEventListener('mouseleave',()=>{
+       this.industryDiv.nativeElement.style.backgroundColor= '#FFFFFF';
+     });
+
     }
 
 

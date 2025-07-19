@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import  dayjs from 'dayjs';
 
 @Component({
@@ -15,11 +15,16 @@ export class SingleAssetsComponent implements OnInit {
      startDate: string;
      closingDate: string;
      price: number;
-  }
+  };
+  @Output() onBackClick = new EventEmitter<any>();
    constructor(){}
    ngOnInit(): void {
 
      this.daysToStart = dayjs(this.assestData.startDate).startOf('day').diff(dayjs(),'day');
      this.duration = dayjs(this.assestData.closingDate).startOf('day').diff(dayjs(this.assestData.startDate).startOf('day'),'day')
-   }
+   };
+
+   back() :void {
+    this.onBackClick.emit('all');
+   };
 }

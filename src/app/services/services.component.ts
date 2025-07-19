@@ -54,14 +54,20 @@ export class ServicesComponent {
 
       showConstructionPlantLeasingPara(){
         this.showConstructionPlantLeasing= true;
+        this.showFleetManagement = false;
+        this.showInvestmentChambers = false;
       }
 
       showFleetManagementPara(){
         this.showFleetManagement = true;
+        this.showConstructionPlantLeasing= false;
+        this.showInvestmentChambers = false;
       }
 
       showInvestmentChambersPara(){
         this.showInvestmentChambers = true;
+        this.showFleetManagement = false;
+        this.showConstructionPlantLeasing= false;
       }
 
 }
